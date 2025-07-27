@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/pages/details.dart';
-import 'package:fooddeliveryapp/widget/widget_support.dart';
+import 'package:fooddeliveryapp2/pages/details.dart';
+import 'package:fooddeliveryapp2/widget/widget_support.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

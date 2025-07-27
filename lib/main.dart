@@ -1,15 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:fooddeliveryapp/admin/admin_login.dart';
-import 'package:fooddeliveryapp/admin/home_admin.dart';
-import 'package:fooddeliveryapp/pages/bottomnav.dart';
-import 'package:fooddeliveryapp/pages/home.dart';
-import 'package:fooddeliveryapp/pages/login.dart';
-import 'package:fooddeliveryapp/pages/onboard.dart';
+import 'package:fooddeliveryapp2/admin/admin_login.dart';
+import 'package:fooddeliveryapp2/admin/home_admin.dart';
+import 'package:fooddeliveryapp2/pages/bottomnav.dart';
+import 'package:fooddeliveryapp2/pages/home.dart';
+import 'package:fooddeliveryapp2/pages/login.dart';
+import 'package:fooddeliveryapp2/pages/onboard.dart';
 
-import 'package:fooddeliveryapp/pages/signup.dart';
-import 'package:fooddeliveryapp/widget/app_constant.dart';
+import 'package:fooddeliveryapp2/pages/signup.dart';
+import 'package:fooddeliveryapp2/widget/app_constant.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,7 +46,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: AdminLogin());
+        home: AdminLogin(),
+      );
   }
 }
 

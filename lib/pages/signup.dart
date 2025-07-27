@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/pages/bottomnav.dart';
-import 'package:fooddeliveryapp/pages/login.dart';
-import 'package:fooddeliveryapp/service/database.dart';
-import 'package:fooddeliveryapp/service/shared_pref.dart';
-import 'package:fooddeliveryapp/widget/widget_support.dart';
+import 'package:fooddeliveryapp2/pages/bottomnav.dart';
+import 'package:fooddeliveryapp2/pages/login.dart';
+import 'package:fooddeliveryapp2/service/database.dart';
+import 'package:fooddeliveryapp2/service/shared_pref.dart';
+import 'package:fooddeliveryapp2/widget/widget_support.dart';
 import 'package:random_string/random_string.dart';
 
 class SignUp extends StatefulWidget {

@@ -3,10 +3,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:fooddeliveryapp/service/database.dart';
-import 'package:fooddeliveryapp/service/shared_pref.dart';
-import 'package:fooddeliveryapp/widget/app_constant.dart';
-import 'package:fooddeliveryapp/widget/widget_support.dart';
+import 'package:fooddeliveryapp2/service/database.dart';
+import 'package:fooddeliveryapp2/service/shared_pref.dart';
+import 'package:fooddeliveryapp2/widget/app_constant.dart';
+import 'package:fooddeliveryapp2/widget/widget_support.dart';
 import 'package:http/http.dart' as http;
 
 class Wallet extends StatefulWidget {

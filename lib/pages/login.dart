@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp/pages/bottomnav.dart';
-import 'package:fooddeliveryapp/pages/forgotpassword.dart';
-import 'package:fooddeliveryapp/pages/signup.dart';
-import 'package:fooddeliveryapp/widget/widget_support.dart';
+import 'package:fooddeliveryapp2/pages/bottomnav.dart';
+import 'package:fooddeliveryapp2/pages/forgotpassword.dart';
+import 'package:fooddeliveryapp2/pages/signup.dart';
+import 'package:fooddeliveryapp2/widget/widget_support.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
