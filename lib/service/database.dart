@@ -1,17 +1,13 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+// Firebase removed. This class now contains dummy methods.
 
 class DatabaseMethods {
   Future addUserDetail(Map<String, dynamic> userInfoMap, String id) async {
-    return await FirebaseFirestore.instance
-        .collection('users')
-        .doc(id)
-        .set(userInfoMap);
+    // Stubbed method – in a real app this would save to Firebase
+    return Future.value();
   }
 
   UpdateUserwallet(String id, String amount) async {
-    return await FirebaseFirestore.instance
-        .collection("users")
-        .doc(id)
-        .update({"Wallet": amount});
+    // Stubbed method – does nothing since Firebase has been removed
+    return Future.value();
   }
 }

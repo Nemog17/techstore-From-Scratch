@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fooddeliveryapp2/pages/bottomnav.dart';
 import 'package:fooddeliveryapp2/pages/forgotpassword.dart';
@@ -15,31 +14,20 @@ class LogIn extends StatefulWidget {
 class _LogInState extends State<LogIn> {
   String email = "", password = "";
 
-  final _formkey= GlobalKey<FormState>();
+  final _formkey = GlobalKey<FormState>();
 
   TextEditingController useremailcontroller = new TextEditingController();
   TextEditingController userpasswordcontroller = new TextEditingController();
 
-  userLogin() async {
-    try {
-      await FirebaseAuth.instance
-          .signInWithEmailAndPassword(email: email, password: password);
-          Navigator.push(context, MaterialPageRoute(builder: (context)=> BottomNav()));
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text(
-          "No User Found for that Email",
-          style: TextStyle(fontSize: 18.0, color: Colors.black),
-        )));
-      }else if(e.code=='wrong-password'){
-         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text(
-          "Wrong Password Provided by User",
-          style: TextStyle(fontSize: 18.0, color: Colors.black),
-        )));
-      }
-    }
+  void userLogin() async {
+    // Dummy login for local testing since Firebase has been removed
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+        content: Text(
+      "Logged in (local demo)",
+      style: TextStyle(fontSize: 18.0, color: Colors.black),
+    )));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => BottomNav()));
   }
 
   @override
@@ -111,8 +99,8 @@ class _LogInState extends State<LogIn> {
                             ),
                             TextFormField(
                               controller: useremailcontroller,
-                              validator: (value){
-                                if(value==null|| value.isEmpty){
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
                                   return 'Please Enter Email';
                                 }
                                 return null;
@@ -126,9 +114,9 @@ class _LogInState extends State<LogIn> {
                               height: 30.0,
                             ),
                             TextFormField(
-                               controller:userpasswordcontroller,
-                              validator: (value){
-                                if(value==null|| value.isEmpty){
+                              controller: userpasswordcontroller,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
                                   return 'Please Enter Password';
                                 }
                                 return null;
@@ -143,8 +131,12 @@ class _LogInState extends State<LogIn> {
                               height: 20.0,
                             ),
                             GestureDetector(
-                              onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPassword()));
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ForgotPassword()));
                               },
                               child: Container(
                                   alignment: Alignment.topRight,
@@ -157,11 +149,11 @@ class _LogInState extends State<LogIn> {
                               height: 80.0,
                             ),
                             GestureDetector(
-                              onTap: (){
-                                if(_formkey.currentState!.validate()){
+                              onTap: () {
+                                if (_formkey.currentState!.validate()) {
                                   setState(() {
-                                    email= useremailcontroller.text;
-                                    password= userpasswordcontroller.text;
+                                    email = useremailcontroller.text;
+                                    password = userpasswordcontroller.text;
                                   });
                                 }
                                 userLogin();
